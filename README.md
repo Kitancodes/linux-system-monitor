@@ -7,6 +7,7 @@ The script provides a basic overview of the system's health, including:
 - Memory usage
 - Top CPU-consuming process
 - Recent system logs
+
 It's designed to help beginners like me practice Linux commmands, scripting, and Git workflows, while learning DevOps fundamentals.
 ## Usage
 1. Open the terminal.
@@ -22,3 +23,13 @@ chmod +x monitor.sh
 ## Notes
 1. This project is for learning purposes.
 2. Feedback and suggestions are welcome!
+# System Health Monitor
+## Basic Monitor ( `monitor.sh `)
+- Checks disk, memory, CPU, and processes
+- Prints recent system errors
+## Enhanced Monitor ( `enhanced-monitor.sh `)
+- Logs results to a file with timestamp
+- Alerts if disk/memory usage exceed threshold
+- Nicely formatted output
+- Shows top 5 memory-hungry processes
+
