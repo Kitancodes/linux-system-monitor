@@ -14,12 +14,11 @@ It's designed to help beginners like me practice Linux commmands, scripting, and
 3. Make the script executable:
    ```bash
 chmod +x monitor.sh
-4. Run the script:
 ./monitor.sh
-Learning Goals
+## Learning Goals
 1. Practice Linux command-line skills.
 2. Learn Bash scripting basics.
 3. Use Git for version control and GitHub for remote repositories. 
-Notes
+## Notes
 1. This project is for learning purposes.
 2. Feedback and suggestions are welcome!
