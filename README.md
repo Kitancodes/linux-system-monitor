@@ -1,35 +1,89 @@
 #Linux System Health Monitor
-This is a simple Linux system health monitoring script created by **Kitancodes**, a beginner DevOps enthusiast.
+
+This is a simple Linux system health monitoring script created by **Kitan**, a beginner DevOps enthusiast.
+
 ## Description
-The script provides a basic overview of the system's health, including:
-- Uptime
-- Disk usage
-- Memory usage
+
+A collection of bash scripts that provide system health monitoring and automated backup capabilities for Linux systems. Perfect for learning DevOps fundamentals and system administration.
+
+## Features
+
+### Basic Monitor (`monitor.sh`)
+- System uptime display
+- Disk usage analyis
+- Memory usage statistics
 - Top CPU-consuming process
 - Recent system logs
 
-It's designed to help beginners like me practice Linux commmands, scripting, and Git workflows, while learning DevOps fundamentals.
-## Usage
-1. Open the terminal.
-2. Navigate to the folder containing `monitor.sh`.
-3. Make the script executable:
-   ```bash
-chmod +x monitor.sh
+### Enhanced Monitor (`enhanced-monitor.sh`)
+- All basic monitor features
+- Automatic logging with timestamps
+- Disk and memory usage alerts (configurable thresholds)
+- Formatted, colorized output
+- Top 5 memory-intensive processes
+- Log file: `system_monitor.log`
+
+### Backup Script (`backup.sh`)
+- Automated backup of monitoring scripts
+- Timestamoed backup files
+- Compressed tar.gz archives
+- Creates backup directory automatically 
+
+## Installation & Usage
+
+1. **Clone the repository:**
+```bash
+   git clone [https://github.com/kitancodes/linux-system-monitor.git]
+   cd linux-system-monitor
+
+2. Make scripts executable 
+chmod +x monitor.sh enhanced-monitor.sh backup.sh
+
+3. Run the scripts
+# Basic monitoring
 ./monitor.sh
+
+# Enhanved monitoring with logging
+./enhanced-monitor.sh
+
+# Create backup
+./backup.sh
+
+File Structure
+linux-system-monitor/
+|-- README.md
+|-- monitor.sh                            # Basic system monitor
+|-- enhanced-monitor.sh                   # Advanced monitor with logging
+|-- backup.sh                             # Backup script
+`-- system_monitor.log                    # Generated log file
+
+Sample Output
+----- SYSTEM HEALTH MONITOR -----
+Date: Fri Sep 27 20:19:20 WAT 2025
+Uptime: 2 hours, 15 minutes
+
+----- DISK USAGE -----
+/dev/sda1: 45% used (8.26/18G)
+
+----- MEMORY USAGE -----
+Memory: 3.26/8.0G (40% used)
+
 ## Learning Goals
 1. Practice Linux command-line skills.
 2. Learn Bash scripting basics.
-3. Use Git for version control and GitHub for remote repositories. 
-## Notes
-1. This project is for learning purposes.
-2. Feedback and suggestions are welcome!
-# System Health Monitor
-## Basic Monitor (`monitor.sh`)
-- Checks disk, memory, CPU, and processes
-- Prints recent system errors
-## Enhanced Monitor (`enhanced-monitor.sh`)
-- Logs results to a file with timestamp
-- Alerts if disk/memory usage exceed threshold
-- Nicely formatted output
-- Shows top 5 memory-hungry processes
+3. Implement Git version control workflows. 
+4. Understand system monitoring concepts.
+5. Learn DevOps automation principles.
 
+## Contributing
+This is a learning project, but feedback suggestions are welcome! Feel free to:
+1. Open issues for bugs or improvements
+2. Submit pull requests
+3. Share your monitoring ideas 
+ 
+## Notes
+1. Designed for educational purposes.
+2. Tested on Ubuntu/Debian systems
+3. Requires basic Linux utilities (df,free,ps,tail)
+
+*Created as part of my DevOps learning journey*
