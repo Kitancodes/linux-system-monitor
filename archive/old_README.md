@@ -36,7 +36,7 @@ A collection of bash scripts that provide system health monitoring and automated
    git clone [https://github.com/kitancodes/linux-system-monitor.git]
    cd linux-system-monitor
 
-2. Make scripts executable 
+2.Make scripts executable 
 chmod +x monitor.sh enhanced-monitor.sh backup.sh
 
 3. Run the scripts

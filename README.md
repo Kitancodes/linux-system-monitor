@@ -11,46 +11,55 @@ Older versions of the scriots are archived in the `archive/` folder.
 
 ---
 
+```
 ## Project Structure
 linux-system-monitor/
 archive/ # Old monitoring scripts
-backuup.sh
+backup.sh
 enhanced-monitor.sh
 monitor.sh
 old_README.md
+
 scripts/ #New monitoring scripts
 basic-NodeHealth.sh
 enhanced-NodeHealth.sh
 README.md # This file
-
+```
 ---
 
 ## Usage
 ### 1. Basic Monitor
 - Navigate to the `scripts/` folder:
-   ```bash
-   cd scripts
+```bash
+ cd scripts
+```
 - Make the sript executable (if not already):
-   ```bash 
+```bash 
 chmod +x basic-NodeHealth.sh
+```
 - Run the script:
-   ```bash
+ ```bash
 ./basic-NodeHealth.sh
+```
 
 ### 2. Enhanced Monitor
 - Navigate to the `scripts/` folder:
-   ```bash
-   cd scripts
+```bash
+ cd scripts
+```
 - Make the script executable:
-   ```bash
+```bash
 chmod +x enhanced-NodeHealth.sh
+```
 - Run the script:
-   ```bash
+```bash
 ./enhanced-NodeHealth.sh
+```
 - Check the log file created in your home directory for detailed reports:
-   ```bash
+```bash
 ls ~ | grep system_health_
 cat ~/system_health_<timestamp>.log
+```
 
 ## What They Do
 ### Basic Monitor
