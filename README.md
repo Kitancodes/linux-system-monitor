@@ -30,33 +30,33 @@ README.md # This file
 ## Usage
 ### 1. Basic Monitor
 - Navigate to the `scripts/` folder:
-```bash
+```
  cd scripts
 ```
 - Make the sript executable (if not already):
-```bash 
+``` 
 chmod +x basic-NodeHealth.sh
 ```
 - Run the script:
- ```bash
+ ```
 ./basic-NodeHealth.sh
 ```
 
 ### 2. Enhanced Monitor
 - Navigate to the `scripts/` folder:
-```bash
+```
  cd scripts
 ```
 - Make the script executable:
-```bash
+```
 chmod +x enhanced-NodeHealth.sh
 ```
 - Run the script:
-```bash
+```
 ./enhanced-NodeHealth.sh
 ```
 - Check the log file created in your home directory for detailed reports:
-```bash
+```
 ls ~ | grep system_health_
 cat ~/system_health_<timestamp>.log
 ```
