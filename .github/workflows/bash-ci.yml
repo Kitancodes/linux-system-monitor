@@ -9,26 +9,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-     - name: Checkout repository
-       uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-     - name: Run Bash script
-       run: bash hello.sh
+      - name: Run Bash script
+        run: bash hello.sh
 
 test:
-   runs-on: ubuntu-latest
-   needs: build
-   steps: 
-    - uses: actions/checkout@v3
-    - name: Run tests
-      run: echo "Running tests..." # replace with ./run-tests.sh
+    runs-on: ubuntu-latest
+    needs: build
+    steps: 
+      - uses: actions/checkout@v3
+      - name: Run tests
+        run: echo "Running tests..." # replace with ./run-tests.sh
 
 deploy:
-   runs-on: ubuntu-latest
-   needs: test
-   steps: 
-    - uses: actions/checkout@v3
-    - name: Deploy
-      run: echo "Deploying application..." # replace with ./deploy.sh 
+    runs-on: ubuntu-latest
+    needs: test
+    steps: 
+      - uses: actions/checkout@v3
+      - name: Deploy
+        run: echo "Deploying application..." # replace with ./deploy.sh 
