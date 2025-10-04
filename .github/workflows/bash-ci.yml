@@ -1,4 +1,4 @@
-name: Bash CI
+name: Bash Script Testing CI
 
 on:
   push: 
@@ -7,27 +7,48 @@ on:
     branches: [ "main" ]
 
 jobs:
-
-  build:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Run Bash script
-        run: bash hello.sh
+      - name: Install ShellCheck
+        run: sudo apt-get install -y shellcheck 
+      - name: Lint bash scripts
+        run: |
+          echo "Checking all .sh files for syntax errors..."
+          shellcheck *.sh || echo " Shellcheck found issues"
 
   test:
     runs-on: ubuntu-latest
-    needs: build
+    needs: lint
     steps: 
+      -name: Checkout repository
       - uses: actions/checkout@v3
-      - name: Run tests
-        run: echo "Running tests"
+      - name: Make scripts executable
+        run: chmod +x *.sh
+      - name: Run hello.sh
+        run: |
+          echo "Testing hello.sh..."
+          bash hello.sh
+      - name: Run test suite
+        run: |
+          if [ -f tests.sh ]; then
+            echo "Running test suite..."
+            bash tests.sh
+          else 
+            echo "No tests.sh found, skipping tests"
+          fi
+
 
   deploy:
     runs-on: ubuntu-latest
     needs: test
-    steps: 
+    steps:
+      - name: Checkout repository 
       - uses: actions/checkout@v3
-      - name: Deploy app
-        run: echo "Deploying application..." 
+      - name: Deployment simulation
+        run: |
+          echo "All tests passed!" 
+          echo "Scripts are ready for deployment"
+          echo "Deployed at: $(date)"
