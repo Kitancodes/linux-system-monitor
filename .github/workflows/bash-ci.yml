@@ -24,7 +24,7 @@ jobs:
     needs: lint
     steps: 
       - name: Checkout repository
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Make scripts executable
         run: chmod +x *.sh
       - name: Run hello.sh
@@ -46,7 +46,7 @@ jobs:
     needs: test
     steps:
       - name: Checkout repository 
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v3
       - name: Deployment simulation
         run: |
           echo "All tests passed!" 
