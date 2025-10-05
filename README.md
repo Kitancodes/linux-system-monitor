@@ -9,10 +9,10 @@ A collection of DevOps projects showcasing system monitoring, backup automation,
 
 This repo contains two main projects that demonstrate different DevOps skills:
 
-### 1️⃣ystem Health Monitoring Scripts (`scripts/` folder)
+### 1️⃣ySystem Health Monitoring Scripts (`scripts/` folder)
 Real-time Linux system health monitoring with basic and enhanced versions.
 
-### 2️⃣ackup Automation with CI/CD (root level)
+### 2️⃣ Backup Automation with CI/CD (root level)
 Automated backup system with professional testing pipeline and continuous integration.
 
 ---
